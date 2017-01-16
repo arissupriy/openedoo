@@ -6,9 +6,26 @@ try:
 		data_json = json.loads(data_file.read())
 except Exception as e:
 	print "please replace config.json.example with your configuration to config.json"
-	with open('config.json.example') as data_file:
-		data_json = json.loads(data_file.read())
+	try:
+		with open('config.json.example') as data_file:
+			data_json = json.loads(data_file.read())
+	except Exception:
+		jss = {
+		    "db":
+		        {
+		            "db_engine": "mysql",
+		            "db_id": "your_username",
+		            "db_password" : "your_password",
+		            "db_host" : "localhost",
+		            "db_port" : "3306",
+		            "db_name" : "db_openedoo",
+		            "db_prefix" : "openedoo"
+		        },
+		    "config": "Development",
+		    "secret_key" : "aksaramaya_openedoo"
+		}
 
+		data_json = json.loads(jss)
 class config(object):
 	DEBUG = True
 	TESTING = False
