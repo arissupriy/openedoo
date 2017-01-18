@@ -15,6 +15,11 @@ openedoo/core/libs/get_modul.py
 openedoo/core/libs/get_requirement.py
 openedoo/core/libs/install_pip.py
 openedoo/core/libs/tools.py
+openedoo/core/management/__init__.py
+openedoo/core/management/base.py
+openedoo/core/management/templates.py
+openedoo/core/management/commands/__init__.py
+openedoo/core/management/commands/createproject.py
 openedoo_test.egg-info/PKG-INFO
 openedoo_test.egg-info/SOURCES.txt
 openedoo_test.egg-info/dependency_links.txt

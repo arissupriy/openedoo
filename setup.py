@@ -20,7 +20,7 @@ if "install" in sys.argv:
 
 setup (
     name='openedoo-test',
-    version='0.9.1',
+    version='0.10.1',
     url='http://github.com/arissupriy/openedoo-test/',
     author='otest',
     author_email='arissy96@gmail.com',
@@ -33,6 +33,20 @@ setup (
     install_requires=[
 	   'flask',
        'flask-script',
+       'flask',
+       'sqlalchemy',
+       'MySQL-python',
+       'redis',
+       'Werkzeug',
+       'itsdangerous',
+       'click',
+       'Jinja2',
+       'alembic',
+       'flask-migrate',
+       'Flask-Script',
+       'GitPython',
+       'gitdb2',
+       'smmap2'
 	],
     entry_points={'console_scripts': [
         'openedoo-test = openedoo.core.libs.command:main',
