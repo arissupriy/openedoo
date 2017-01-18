@@ -76,6 +76,10 @@ def test():
     print "no problemo"
     pass
 
+@manager.command
+def install():
+    print download_git(url="https://github.com/openedoo/openedoo",name_module="openedoo")
+
 class Modules:
     module = Manager(usage="Manage application modules")
 
