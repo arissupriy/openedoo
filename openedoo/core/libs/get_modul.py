@@ -85,16 +85,18 @@ def install_git_(url=None):
 		message = {"message":"install failed"}
 		os.chdir('..')
 	return message
-def install_git(url=None,directory=None,name_modul=None):
-	directory = 'modules/{}'.format(name_modul)
+def download_git(url=None,directory=None,name_module=None):
+	if directory is None:
+		directory = '{}'.format(name_module)
 	if url == None:
 		return "your url is None"
-	if name_modul == None:
-		return "please input your modul"
+	if name_module == None:
+		return "please input your module"
 	try:
 		Repo.clone_from(url,directory)
-		message = {'message':'your modul had installed'}
-	except Exception:
+		message = {'message':'your module had installed'}
+	except Exception as e:
+		print e
 		message = {"message":"install failed"}
 	return message
 def add_manifest(name_module=None,version_modul=None,url=None):
